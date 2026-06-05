@@ -12,7 +12,7 @@ df_test = pd.read_csv('df_test.csv')
 
 
 #Get signal
-signal_threshold = np.percentile(df_test['VRP_pred'], 95)
+signal_threshold = np.percentile(df_test['VRP_pred'], 90)
 df_test['Signal'] = (df_test['VRP_pred'] > signal_threshold).astype(int)
 
 
